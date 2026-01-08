@@ -1,0 +1,44 @@
+# Build output
+dist/
+.output/
+.astro/
+
+# Dependencies
+node_modules/
+pnpm-lock.yaml
+yarn.lock
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.*
+!.env.example
+!.env.preview
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+*.swp
+*.swo
+
+# Deployment
+.vercel/
+.netlify/
+
+# Testing
+coverage/
+
+# Temporary
+tmp/

@@ -1,0 +1,146 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: 'Home — Non-Profit Organization',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Donate Now',
+        href: '#',
+        target: '_blank',
+        icon: 'tabler:heart',
+      },
+      { text: 'Learn more', href: '#mission' },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+  >
+    <Fragment slot="title">
+      Together we can make a <span class="hidden xl:inline">difference for a</span>
+      <span class="text-accent dark:text-white"> Better World</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Non-Profit Org</span> is dedicated to empowering communities, protecting the environment, and building a sustainable future for all.</span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">Empower. Protect. Build.</span>
+    </Fragment>
+  </Hero>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="mission"
+    tagline="Our Mission"
+    title="What we do"
+    subtitle="We focus on key areas to create lasting positive impact."
+    items={[
+      {
+        title: 'Community Empowerment',
+        description:
+          'Providing resources, education, and support to help communities thrive and become self-sustainable.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Environmental Protection',
+        description:
+          'Implementing projects to conserve nature, reduce waste, and promote renewable energy sources.',
+        icon: 'tabler:leaf',
+      },
+      {
+        title: 'Education & Advocacy',
+        description:
+          'Raising awareness about critical issues and advocating for policies that benefit the underrepresented.',
+        icon: 'tabler:school',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Our Impact"
+    title="Making a Real Difference"
+    items={[
+      {
+        title: 'Direct Aid',
+        description:
+          'We provide direct assistance to those in need, ensuring immediate relief and support.',
+      },
+      {
+        title: 'Sustainable Projects',
+        description:
+          'Our projects are designed for long-term sustainability, ensuring benefits continue for years to come.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Impact Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Changing lives, one step at a time</h3>
+      We believe in transparency and accountability in all our operations.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'People Helped', amount: '10K+' },
+      { title: 'Volunteers', amount: '500+' },
+      { title: 'Projects', amount: '50' },
+      { title: 'Years Active', amount: '10' },
+    ]}
+  />
+
+  <!-- HighlightedPosts Widget ******* -->
+  
+  <BlogLatestPosts
+    title="Latest News & Stories"
+    information={`Stay updated with our latest activities, success stories, and upcoming events.`}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Become a Volunteer',
+        href: '/contact',
+        icon: 'tabler:user-plus',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Join our mission today
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Whether you donate, volunteer, or spread the word, your support matters.
+    </Fragment>
+  </CallToAction>
+</Layout>
