@@ -9,7 +9,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
 const metadata = {
-  title: 'Home — Non-Profit Organization',
+  title: 'Home — Forum Komunikasi NL',
   ignoreTitleTemplate: true,
 };
 ---
@@ -31,13 +31,14 @@ const metadata = {
     image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Together we can make a <span class="hidden xl:inline">difference for a</span>
-      <span class="text-accent dark:text-white"> Better World</span>
+      Bersama Membangun Umat di
+      <span class="text-accent dark:text-white"> Belanda</span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Non-Profit Org</span> is dedicated to empowering communities, protecting the environment, and building a sustainable future for all.</span
+        <span class="font-semibold">Forum Komunikasi Islam</span> adalah forum komunikasi antar komunitas Islam Indonesia
+        di Belanda.</span
       >
       <span class="block mb-1 sm:hidden font-bold text-blue-600">Empower. Protect. Build.</span>
     </Fragment>
@@ -59,8 +60,7 @@ const metadata = {
       },
       {
         title: 'Environmental Protection',
-        description:
-          'Implementing projects to conserve nature, reduce waste, and promote renewable energy sources.',
+        description: 'Implementing projects to conserve nature, reduce waste, and promote renewable energy sources.',
         icon: 'tabler:leaf',
       },
       {
@@ -81,8 +81,7 @@ const metadata = {
     items={[
       {
         title: 'Direct Aid',
-        description:
-          'We provide direct assistance to those in need, ensuring immediate relief and support.',
+        description: 'We provide direct assistance to those in need, ensuring immediate relief and support.',
       },
       {
         title: 'Sustainable Projects',
@@ -96,7 +95,9 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Changing lives, one step at a time</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Changing lives, one step at a time
+      </h3>
       We believe in transparency and accountability in all our operations.
     </Fragment>
 
@@ -117,7 +118,7 @@ const metadata = {
   />
 
   <!-- HighlightedPosts Widget ******* -->
-  
+
   <BlogLatestPosts
     title="Latest News & Stories"
     information={`Stay updated with our latest activities, success stories, and upcoming events.`}
@@ -135,12 +136,8 @@ const metadata = {
       },
     ]}
   >
-    <Fragment slot="title">
-      Join our mission today
-    </Fragment>
+    <Fragment slot="title"> Join our mission today </Fragment>
 
-    <Fragment slot="subtitle">
-      Whether you donate, volunteer, or spread the word, your support matters.
-    </Fragment>
+    <Fragment slot="subtitle"> Whether you donate, volunteer, or spread the word, your support matters. </Fragment>
   </CallToAction>
 </Layout>

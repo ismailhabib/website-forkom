@@ -11,7 +11,7 @@ metadata:
   title:
     default: Non-Profit Organization
     template: '%s — Non-Profit Org'
-  description: "Empowering communities and making a difference. Join us in our mission."
+  description: 'Empowering communities and making a difference. Join us in our mission.'
   robots:
     index: true
     follow: true
