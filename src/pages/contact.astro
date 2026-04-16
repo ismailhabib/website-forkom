@@ -5,24 +5,24 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: 'Kontak',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Get in Touch" />
+  <HeroText tagline="Kontak" title="Hubungi Kami" />
 
   <ContactUs
     id="form"
-    title="We'd love to hear from you!"
-    subtitle="Whether you have questions, want to volunteer, or are looking to partner with us, please reach out."
+    title="Kami ingin mendengar dari Anda!"
+    subtitle="Apakah Anda memiliki pertanyaan, ingin menjadi sukarelawan, atau ingin bermitra dengan kami, silakan hubungi kami."
     inputs={[
       {
         type: 'text',
         name: 'name',
-        label: 'Name',
+        label: 'Nama',
       },
       {
         type: 'email',
@@ -31,37 +31,38 @@ const metadata = {
       },
     ]}
     textarea={{
-      label: 'Message',
+      label: 'Pesan',
     }}
+    button="Kirim Pesan"
     disclaimer={{
       label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+        'Dengan mengirimkan formulir kontak ini, Anda mengakui dan menyetujui pengumpulan informasi pribadi Anda.',
     }}
-    description="Our team typically responds within 24-48 hours."
+    description="Tim kami biasanya merespons dalam waktu 24-48 jam."
   />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Reach Us"
+    title="Lokasi Kami"
     items={[
       {
-        title: 'General Inquiries',
+        title: 'Pertanyaan Umum',
         description: 'info@example.org',
         icon: 'tabler:mail',
       },
       {
-        title: 'Volunteer',
+        title: 'Sukarelawan',
         description: 'volunteer@example.org',
         icon: 'tabler:heart',
       },
       {
-        title: 'Phone',
+        title: 'Telepon',
         description: '+1 (234) 567-890',
         icon: 'tabler:phone',
       },
       {
-        title: 'Office',
+        title: 'Kantor',
         description: '123 Charity Lane, Kindness City',
         icon: 'tabler:map-pin',
       },

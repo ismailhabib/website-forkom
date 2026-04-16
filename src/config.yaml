@@ -1,7 +1,7 @@
 site:
   name: FORKOM NL
   site: 'https://ismailhabib.github.io/' # TODO: Replace with your actual site URL
-  base: '/website-forkom/' # TODO: Set to '/repo-name' if deploying to GitHub Pages project site
+  base: '/website-forkom' # TODO: Set to '/repo-name' if deploying to GitHub Pages project site
   trailingSlash: false
 
   googleSiteVerificationId: ''

@@ -3,54 +3,45 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Home',
+      text: 'Beranda',
       href: getPermalink('/'),
     },
     {
-      text: 'About',
+      text: 'Tentang Kami',
       href: getPermalink('/about'),
     },
     {
-      text: 'News',
+      text: 'Berita',
       href: getBlogPermalink(),
     },
     {
-      text: 'Contact',
+      text: 'Hubungi Kami',
       href: getPermalink('/contact'),
     },
   ],
-  actions: [{ text: 'Donate', href: '#', target: '_blank', variant: 'primary' as const }],
+  actions: [],
 };
 
 export const footerData = {
   links: [
     {
-      title: 'Organization',
+      title: 'Organisasi',
       links: [
-        { text: 'About Us', href: getPermalink('/about') },
-        { text: 'Our Mission', href: getPermalink('/about#mission') },
-        { text: 'Team', href: getPermalink('/about#team') },
+        { text: 'Tentang Kami', href: getPermalink('/about') },
+        { text: 'Misi Kami', href: getPermalink('/about#mission') },
+        { text: 'Tim', href: getPermalink('/about#team') },
       ],
     },
     {
-      title: 'News & Updates',
-      links: [
-        { text: 'Latest News', href: getBlogPermalink() },
-        { text: 'Stories', href: getBlogPermalink() },
-      ],
+      title: 'Berita & Pembaruan',
+      links: [{ text: 'Berita Terbaru', href: getBlogPermalink() }],
     },
     {
-      title: 'Support',
-      links: [
-        { text: 'Contact Us', href: getPermalink('/contact') },
-        { text: 'Donate', href: '#' },
-      ],
+      title: 'Dukungan',
+      links: [{ text: 'Hubungi Kami', href: getPermalink('/contact') }],
     },
   ],
-  secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
-  ],
+  secondaryLinks: [],
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
@@ -58,6 +49,6 @@ export const footerData = {
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
   footNote: `
-    &copy; 2024 Non-Profit Organization. All rights reserved.
+    &copy; 2024 Forum Komunikasi NL. Seluruh hak cipta dilindungi.
   `,
 };
