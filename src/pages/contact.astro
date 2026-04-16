@@ -18,6 +18,8 @@ const metadata = {
     id="form"
     title="Kami ingin mendengar dari Anda!"
     subtitle="Apakah Anda memiliki pertanyaan, ingin menjadi sukarelawan, atau ingin bermitra dengan kami, silakan hubungi kami."
+    action="https://api.web3forms.com/submit"
+    method="POST"
     inputs={[
       {
         type: 'text',
@@ -32,14 +34,19 @@ const metadata = {
     ]}
     textarea={{
       label: 'Pesan',
+      name: 'message',
     }}
     button="Kirim Pesan"
     disclaimer={{
       label:
         'Dengan mengirimkan formulir kontak ini, Anda mengakui dan menyetujui pengumpulan informasi pribadi Anda.',
     }}
-    description="Tim kami biasanya merespons dalam waktu 24-48 jam."
-  />
+    description="Tim kami akan merespons secepatnya."
+  >
+    <input type="hidden" name="access_key" value="55579322-a9e1-4c65-b0a1-2f5ff816cb85" />
+    <input type="hidden" name="subject" value="Pesan baru dari website FORKOM" />
+    <input type="hidden" name="from_name" value="FORKOM Website" />
+  </ContactUs>
 
   <!-- Features2 Widget ************** -->
 
@@ -48,7 +55,7 @@ const metadata = {
     items={[
       {
         title: 'Pertanyaan Umum',
-        description: 'info@example.org',
+        description: 'forkom.nederland@gmail.com',
         icon: 'tabler:mail',
       },
       {
